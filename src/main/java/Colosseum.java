@@ -119,7 +119,17 @@ public static Pokemon buildPokemon() {
      */
     public static void printWhoIsAhead() {
         System.out.println("Implement me!");
-    }
+       if (firstPokemon.hitPoints > secondPokemon.hitPoints) {
+           System.out.println(firstPokemon.name + " is ahead!");
+       }
+       if (firstPokemon.hitPoints == secondPokemon.hitPoints) {
+        System.out.println("They are tied!");
+       }
+       if (firstPokemon.hitPoints < secondPokemon.hitPoints) {
+        System.out.println(secondPokemon.name + " is ahead!");
+       }
+       }
+
 
     /**
      * Prints out the overall winner of the battle.
@@ -130,6 +140,11 @@ public static Pokemon buildPokemon() {
      */
     public static void determineWinner() {
         System.out.println("Implement me!");
+        if (firstPokemon.hitPoints < secondPokemon.hitPoints) {
+            System.out.println(firstPokemon.name + " has won!");
+        } else {
+            System.out.println(secondPokemon.name + " has won!");
+        }
     }
 
     /**
